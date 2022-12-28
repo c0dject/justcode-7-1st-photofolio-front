@@ -17,7 +17,7 @@ const CardDetailContents = () => {
 
   //카드 상세페이지 정보 fetch
   useEffect(() => {
-    fetch('http://43.201.0.95:8000/works/feed/' + id, {
+    fetch('http://15.164.86.242:8001/works/feed/' + id, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ const CardDetailContents = () => {
 
   //새로운 댓글 저장 fetch
   const saveReply = () => {
-    fetch('http://43.201.0.95:8000/comments', {
+    fetch('http://15.164.86.242:8001/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ const CardDetailContents = () => {
 
   // //좋아요 누르면 실행되는 로직
   // const clickLike = () => {
-  //   fetch('http://43.201.0.95:8000/works/sympathy', {
+  //   fetch('http://15.164.86.242:8001/works/sympathy', {
   //     method: 'POST',
   //     headers: {
   //       'Content-Type': 'application/json',

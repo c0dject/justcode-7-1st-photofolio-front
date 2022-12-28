@@ -58,7 +58,7 @@ function Join({ setJoinPage }) {
       userEmail.current.value &&
       files[0]
     ) {
-      fetch('http://43.201.0.95:8000/user/signup', {
+      fetch('http://15.164.86.242:8001/user/signup', {
         method: 'POST',
         headers: {
           // 'Content-Type': 'multipart/form-data', // 헤더 없으면 에러남
@@ -80,7 +80,7 @@ function Join({ setJoinPage }) {
 
           if (res.message === '회원가입 되었습니다.') {
             localStorage.clear();
-            window.location.href = 'http://43.201.0.95:3000/works';
+            window.location.href = 'http://43.201.0.95:3001/works';
           }
 
           if (res.message === '아이디를 4자리 ~ 12자리 이내로 입력해주세요.') {

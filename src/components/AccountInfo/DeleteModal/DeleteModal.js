@@ -12,7 +12,7 @@ const DeleteModal = ({ setModalOpen }) => {
   //데이터 삭제
   const deleteAccount = e => {
     e.preventDefault();
-    fetch('http://43.201.0.95:8000/user/accountInfo', {
+    fetch('http://15.164.86.242:8001/user/accountInfo', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

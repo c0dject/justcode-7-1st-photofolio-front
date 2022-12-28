@@ -17,7 +17,7 @@ const SearchPage = () => {
   //검색 페이지 데이터 불러오기
   useEffect(() => {
     setContent(query);
-    fetch('http://43.201.0.95:8000/searchlist' + location.search)
+    fetch('http://15.164.86.242:8001/searchlist' + location.search)
       .then(res => res.json())
       .then(json => {
         setResultCount(json.resultCount[0].result_cnt);

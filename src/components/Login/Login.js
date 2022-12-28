@@ -23,7 +23,7 @@ function Login({ closeLoginpage, setJoinPage, setOpenLoginPage }) {
 
   useEffect(() => {
     if (resObj.login_id) {
-      fetch('http://43.201.0.95:8000/user/login', {
+      fetch('http://15.164.86.242:8001/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json', // 헤더 없으면 에러남
@@ -38,7 +38,7 @@ function Login({ closeLoginpage, setJoinPage, setOpenLoginPage }) {
             localStorage.setItem('id', res.id);
             localStorage.setItem('kor_name', res.name);
           }
-          if (res.token) window.location.href = 'http://43.201.0.95:3000/works';
+          if (res.token) window.location.href = 'http://43.201.0.95:3001/works';
         });
     }
   }, [resObj]);

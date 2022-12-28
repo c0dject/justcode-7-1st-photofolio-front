@@ -22,15 +22,15 @@ const Router = () => {
   }, [isLogin]);
   //처음 접속 시 토큰 여부에 따라 시작 페이지 설정
   if (
-    (window.location.href === 'http://43.201.0.95:3000/') &
+    (window.location.href === 'http://43.201.0.95:3001/') &
     (isLogin === false)
   ) {
-    window.location.href = 'http://43.201.0.95:3000/works';
+    window.location.href = 'http://43.201.0.95:3001/works';
   } else if (
-    (window.location.href === 'http://43.201.0.95:3000/') &
+    (window.location.href === 'http://43.201.0.95:3001/') &
     (isLogin === true)
   ) {
-    window.location.href = 'http://43.201.0.95:3000/feeds';
+    window.location.href = 'http://43.201.0.95:3001/feeds';
   }
 
   return (

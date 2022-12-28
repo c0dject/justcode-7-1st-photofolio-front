@@ -26,7 +26,7 @@ const AccountInfo = () => {
 
   //계정정보 fetch
   useEffect(() => {
-    fetch('http://43.201.0.95:8000/user/accountInfo', {
+    fetch('http://15.164.86.242:8001/user/accountInfo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ const AccountInfo = () => {
   //수정된 계정정보 서버로 저장
   const saveAccountInfo = e => {
     e.preventDefault();
-    fetch('http://43.201.0.95:8000/user/accountInfo', {
+    fetch('http://15.164.86.242:8001/user/accountInfo', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

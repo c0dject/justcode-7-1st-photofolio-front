@@ -40,7 +40,7 @@ const CardDetailCarousel = () => {
   const params = useParams();
   useEffect(() => {
     //팔로우 기능 제외한 데이터 가져오기
-    fetch('http://43.201.0.95:8000/works/feed/' + params.id, {
+    fetch('http://15.164.86.242:8001/works/feed/' + params.id, {
       headers: {
         'Content-Type': 'application/json',
         token: localStorage.getItem('token'),
@@ -54,12 +54,15 @@ const CardDetailCarousel = () => {
       });
 
     //팔로우 버튼 데이터 가져오기
-    fetch('http://43.201.0.95:8000/works/feed/' + params.id + '/followcheck', {
-      headers: {
-        'Content-Type': 'application/json',
-        token: localStorage.getItem('token'),
-      },
-    })
+    fetch(
+      'http://15.164.86.242:8001/works/feed/' + params.id + '/followcheck',
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          token: localStorage.getItem('token'),
+        },
+      }
+    )
       .then(res => res.json())
       .then(json => {
         setIsFollow(json.checkFollow[0].success);
@@ -76,7 +79,7 @@ const CardDetailCarousel = () => {
   const sendResult = e => {
     if (e.target.className === 'followBtn') {
       //POST 작가id, 토큰
-      fetch('http://43.201.0.95:8000/follow', {
+      fetch('http://15.164.86.242:8001/follow', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -90,7 +93,7 @@ const CardDetailCarousel = () => {
         .then(json => {});
     } else if (e.target.className === 'followingBtn') {
       //DELETE 작가id, 토큰
-      fetch('http://43.201.0.95:8000/follow', {
+      fetch('http://15.164.86.242:8001/follow', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
